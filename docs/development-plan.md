@@ -2,20 +2,20 @@
 
 ## プロジェクト概要
 
-**目的**: 自己宣言をMarket化し、他者の視線による行動変容を促す「Hyper Casual Finance」アプリのフロントエンドモック実装
+目的: 自己宣言をMarket化し、他者の視線による行動変容を促す「Hyper Casual Finance」アプリのフロントエンドモック実装
 
-**スコープ**: チェーン接続・署名・オラクルなしで、Mini Appとしてのユーザー体験を再現するフロントエンドのみの実装
+スコープ: チェーン接続・署名・オラクルなしで、Mini Appとしてのユーザー体験を再現するフロントエンドのみの実装
 
-**制約**: 1時間以内に完成可能なスコープに限定
+制約: 1時間以内に完成可能なスコープに限定
 
 ## 技術スタック
 
-- **Framework**: Next.js 15 (App Router)
-- **言語**: TypeScript
-- **スタイリング**: Tailwind CSS（既存設定利用）
-- **状態管理**: React useState（ローカルステート）
-- **パッケージマネージャー**: pnpm
-- **プラットフォーム**: Base Mini App
+- Framework: Next.js 15 (App Router)
+- 言語: TypeScript
+- スタイリング: Tailwind CSS（既存設定利用）
+- 状態管理: React useState（ローカルステート）
+- パッケージマネージャー: pnpm
+- プラットフォーム: Base Mini App
 
 ## コアナラティブ
 
@@ -23,14 +23,14 @@ UIを通じて以下を明確に伝える：
 
 1. 自己宣言をMarket化している
 2. 他人の視線が行動変容を生む
-3. Oracleではなく**人間関係が解決レイヤー**
+3. Oracleではなく人間関係が解決レイヤー
 4. 「軽いのに効く」Hyper Casual Finance
 
 ## ユーザー役割
 
-- **Host**: Marketを作成、Kaishyakuを指名、達成/未達を自己申告
-- **Kaishyaku（介錯人）**: Market Closeを実行
-- **Participant**: YES/NOにBet
+- Host: Marketを作成、Kaishyakuを指名、達成/未達を自己申告
+- Kaishyaku（介錯人）: Market Closeを実行
+- Participant: YES/NOにBet
 
 ※ モックでは全て同一ユーザーとして操作可能（UI上で役割制限を明示）
 
@@ -87,10 +87,10 @@ interface Market {
 
 ### ステータスロジック
 
-- `now < deadline && !declaredResult` → **OPEN**
-- `now >= deadline && !closed` → **PENDING CLOSE**
-- `closed && finalResult=true` → **CLOSED: SUCCESS**
-- `closed && finalResult=false` → **CLOSED: FAIL**
+- `now < deadline && !declaredResult` → OPEN
+- `now >= deadline && !closed` → PENDING CLOSE
+- `closed && finalResult=true` → CLOSED: SUCCESS
+- `closed && finalResult=false` → CLOSED: FAIL
 
 ## 実装タスク分解
 
@@ -127,9 +127,9 @@ interface Market {
 
 ### デザイン
 
-- **カラー**: 白・黒・グレーのみ
-- **テキスト**: 主体、画像不要
-- **レイアウト**: モバイルファースト
+- カラー: 白・黒・グレーのみ
+- テキスト: 主体、画像不要
+- レイアウト: モバイルファースト
 
 ### アクション補足
 
@@ -174,9 +174,9 @@ function closeMarket() {
 
 ### 優先順位
 
-1. **動くこと** - 完璧より完成
-2. **ナラティブ** - UXで価値を伝える
-3. **差し替え容易性** - 関数名とコメントで明示
+1. 動くこと - 完璧より完成
+2. ナラティブ - UXで価値を伝える
+3. 差し替え容易性 - 関数名とコメントで明示
 
 ### 制約
 
@@ -259,9 +259,9 @@ pnpm dev
 
 ## タイムライン
 
-- **Phase 1**: 0:00-0:15 データ層
-- **Phase 2**: 0:15-0:35 コンポーネント
-- **Phase 3**: 0:35-0:55 ページ実装
-- **Phase 4**: 0:55-1:00 最終調整
+- Phase 1: 0:00-0:15 データ層
+- Phase 2: 0:15-0:35 コンポーネント
+- Phase 3: 0:35-0:55 ページ実装
+- Phase 4: 0:55-1:00 最終調整
 
-**合計**: 約60分
+合計: 約60分
