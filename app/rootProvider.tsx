@@ -3,6 +3,7 @@ import { ReactNode } from "react";
 import { base } from "wagmi/chains";
 import { OnchainKitProvider } from "@coinbase/onchainkit";
 import "@coinbase/onchainkit/styles.css";
+import { MarketsProvider } from "./contexts/MarketsContext";
 
 export function RootProvider({ children }: { children: ReactNode }) {
   return (
@@ -24,7 +25,9 @@ export function RootProvider({ children }: { children: ReactNode }) {
         notificationProxyUrl: undefined,
       }}
     >
-      {children}
+      <MarketsProvider>
+        {children}
+      </MarketsProvider>
     </OnchainKitProvider>
   );
 }
