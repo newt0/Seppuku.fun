@@ -7,9 +7,9 @@ SeppukuFiは、「身銭を切るハラキリ」を通じて自己変容を実�
 
 ## デモ
 
-* アプリURL: https://example.com
-* スライド: https://example.com (Google Slides等)
-* デモ動画(任意): https://example.com (YouTube/Loom等)
+* アプリURL: https://seppuku.vercel.app/
+* スライド: https://gamma.app/docs/SeppukuFi-afoa36zd99345b8
+* デモ動画(任意): -
 
 ## 推しポイント
 
