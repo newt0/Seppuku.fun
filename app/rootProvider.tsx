@@ -2,7 +2,6 @@
 import { ReactNode } from "react";
 import { base } from "wagmi/chains";
 import { OnchainKitProvider } from "@coinbase/onchainkit";
-import "@coinbase/onchainkit/styles.css";
 import { MarketsProvider } from "./contexts/MarketsContext";
 
 export function RootProvider({ children }: { children: ReactNode }) {
