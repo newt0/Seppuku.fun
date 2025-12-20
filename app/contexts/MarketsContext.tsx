@@ -14,7 +14,9 @@ interface MarketsContextType {
   createMarket: (
     goal: string,
     host: string,
+    hostWallet: string,
     kaishyaku: string,
+    kaishyakuWallet: string,
     deadlineHours: number,
     hostStake: number
   ) => Market;
@@ -52,8 +54,10 @@ export function MarketsProvider({ children }: { children: ReactNode }) {
       {
         id: "market-toeic-800",
         goal: "TOEIC800点を取得する",
-        host: "0x1234...5678",
-        kaishyaku: "0xabcd...efgh",
+        host: "さとし",
+        hostWallet: "0x1234...5678",
+        kaishyaku: "英語の先生",
+        kaishyakuWallet: "0xabcd...efgh",
         deadline: deadline1.toISOString(),
         hostStake: 0.05,
         yesPool: 0.12,
@@ -63,8 +67,10 @@ export function MarketsProvider({ children }: { children: ReactNode }) {
       {
         id: "market-weight-loss",
         goal: "5kg減量する",
-        host: "0x2345...6789",
-        kaishyaku: "0xbcde...fghi",
+        host: "健太",
+        hostWallet: "0x2345...6789",
+        kaishyaku: "トレーナー美咲",
+        kaishyakuWallet: "0xbcde...fghi",
         deadline: deadline2.toISOString(),
         hostStake: 0.03,
         yesPool: 0.06,
@@ -74,8 +80,10 @@ export function MarketsProvider({ children }: { children: ReactNode }) {
       {
         id: "market-christmas-girlfriend",
         goal: "クリスマスまでに彼氏を作る",
-        host: "0x3456...7890",
-        kaishyaku: "0xcdef...ghij",
+        host: "ゆい",
+        hostWallet: "0x3456...7890",
+        kaishyaku: "親友まり",
+        kaishyakuWallet: "0xcdef...ghij",
         deadline: deadline3.toISOString(),
         hostStake: 0.1,
         yesPool: 0.02,
@@ -110,7 +118,9 @@ export function MarketsProvider({ children }: { children: ReactNode }) {
     (
       goal: string,
       host: string,
+      hostWallet: string,
       kaishyaku: string,
+      kaishyakuWallet: string,
       deadlineHours: number,
       hostStake: number
     ): Market => {
@@ -121,7 +131,9 @@ export function MarketsProvider({ children }: { children: ReactNode }) {
         id: `market-${Date.now()}`,
         goal,
         host,
+        hostWallet,
         kaishyaku,
+        kaishyakuWallet,
         deadline: deadline.toISOString(),
         hostStake,
         yesPool: 0,

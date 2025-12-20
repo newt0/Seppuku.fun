@@ -30,8 +30,8 @@ export function MarketCard({ market, status }: MarketCardProps) {
         </div>
 
         <div className="text-sm text-gray-600 mb-3">
-          <p>Host: {market.host}</p>
-          <p>Kaishyaku: {market.kaishyaku}</p>
+          <p>Host: {market.host} ({market.hostWallet})</p>
+          <p>Kaishyaku: {market.kaishyaku} ({market.kaishyakuWallet})</p>
           <p className="mt-1">{formatDeadline(market.deadline)}</p>
         </div>
 

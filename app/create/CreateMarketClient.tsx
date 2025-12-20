@@ -21,14 +21,18 @@ export default function CreateMarketClient() {
   const handleSubmit = (data: {
     goal: string;
     host: string;
+    hostWallet: string;
     kaishyaku: string;
+    kaishyakuWallet: string;
     deadlineHours: number;
     hostStake: number;
   }) => {
     const market = createMarket(
       data.goal,
       data.host,
+      data.hostWallet,
       data.kaishyaku,
+      data.kaishyakuWallet,
       data.deadlineHours,
       data.hostStake
     );

@@ -6,7 +6,9 @@ interface CreateMarketFormProps {
   onSubmit: (data: {
     goal: string;
     host: string;
+    hostWallet: string;
     kaishyaku: string;
+    kaishyakuWallet: string;
     deadlineHours: number;
     hostStake: number;
   }) => void;
@@ -15,7 +17,9 @@ interface CreateMarketFormProps {
 export function CreateMarketForm({ onSubmit }: CreateMarketFormProps) {
   const [goal, setGoal] = useState('');
   const [host, setHost] = useState('');
+  const [hostWallet, setHostWallet] = useState('');
   const [kaishyaku, setKaishyaku] = useState('');
+  const [kaishyakuWallet, setKaishyakuWallet] = useState('');
   const [deadlineHours, setDeadlineHours] = useState(24);
   const [hostStake, setHostStake] = useState(0.01);
 
@@ -24,7 +28,9 @@ export function CreateMarketForm({ onSubmit }: CreateMarketFormProps) {
     onSubmit({
       goal,
       host,
+      hostWallet,
       kaishyaku,
+      kaishyakuWallet,
       deadlineHours,
       hostStake,
     });
@@ -49,14 +55,29 @@ export function CreateMarketForm({ onSubmit }: CreateMarketFormProps) {
 
       <div>
         <label htmlFor="host" className="block text-sm font-bold mb-1">
-          Host (Your Name / Address)
+          Host Name (Your Name)
         </label>
         <input
           id="host"
           type="text"
           value={host}
           onChange={(e) => setHost(e.target.value)}
-          placeholder="e.g., alice.eth or 0x123..."
+          placeholder="e.g., さとし"
+          className="w-full border border-black p-2"
+          required
+        />
+      </div>
+
+      <div>
+        <label htmlFor="hostWallet" className="block text-sm font-bold mb-1">
+          Host Wallet Address
+        </label>
+        <input
+          id="hostWallet"
+          type="text"
+          value={hostWallet}
+          onChange={(e) => setHostWallet(e.target.value)}
+          placeholder="e.g., 0x123..."
           className="w-full border border-black p-2"
           required
         />
@@ -64,20 +85,35 @@ export function CreateMarketForm({ onSubmit }: CreateMarketFormProps) {
 
       <div>
         <label htmlFor="kaishyaku" className="block text-sm font-bold mb-1">
-          Kaishyaku (介錯人 - Name / Address)
+          Kaishyaku Name (介錯人)
         </label>
         <input
           id="kaishyaku"
           type="text"
           value={kaishyaku}
           onChange={(e) => setKaishyaku(e.target.value)}
-          placeholder="e.g., bob.eth or 0x456..."
+          placeholder="e.g., 親友まり"
           className="w-full border border-black p-2"
           required
         />
         <p className="text-xs text-gray-500 mt-1">
           The person who will execute Market Close
         </p>
+      </div>
+
+      <div>
+        <label htmlFor="kaishyakuWallet" className="block text-sm font-bold mb-1">
+          Kaishyaku Wallet Address
+        </label>
+        <input
+          id="kaishyakuWallet"
+          type="text"
+          value={kaishyakuWallet}
+          onChange={(e) => setKaishyakuWallet(e.target.value)}
+          placeholder="e.g., 0x456..."
+          className="w-full border border-black p-2"
+          required
+        />
       </div>
 
       <div>

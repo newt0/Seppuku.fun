@@ -5,7 +5,9 @@ export interface Market {
   id: string;
   goal: string;
   host: string;
+  hostWallet: string;
   kaishyaku: string;
+  kaishyakuWallet: string;
   deadline: string; // ISO string
   hostStake: number;
   yesPool: number;

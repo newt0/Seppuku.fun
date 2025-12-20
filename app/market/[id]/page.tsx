@@ -92,11 +92,13 @@ export default function MarketDetail() {
             <div className="grid grid-cols-2 gap-2">
               <div>
                 <span className="text-gray-500">Host:</span>
-                <p className="font-mono">{market.host}</p>
+                <p className="font-bold">{market.host}</p>
+                <p className="font-mono text-xs text-gray-600">{market.hostWallet}</p>
               </div>
               <div>
                 <span className="text-gray-500">Kaishyaku:</span>
-                <p className="font-mono">{market.kaishyaku}</p>
+                <p className="font-bold">{market.kaishyaku}</p>
+                <p className="font-mono text-xs text-gray-600">{market.kaishyakuWallet}</p>
               </div>
             </div>
             <div>
