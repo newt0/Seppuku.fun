@@ -61,7 +61,7 @@ export function MarketsProvider({ children }: { children: ReactNode }) {
     return [
       {
         id: "market-no-alcohol",
-        goal: "半年間禁酒継続",
+        goal: "半年間禁酒",
         host: "mameta",
         hostWallet: "0x1a2b...3c4d",
         kaishyaku: "yometa",
@@ -74,7 +74,7 @@ export function MarketsProvider({ children }: { children: ReactNode }) {
       },
       {
         id: "market-ycombinator",
-        goal: "Y Combinator X2026 batchに採択される",
+        goal: "Y Combinator X2026 batchに採択",
         host: "etaroid",
         hostWallet: "0x9i0j...1k2l",
         kaishyaku: "yu8muraka3",
@@ -87,7 +87,7 @@ export function MarketsProvider({ children }: { children: ReactNode }) {
       },
       {
         id: "market-weight-loss",
-        goal: "5kg痩せる",
+        goal: "5kg減量",
         host: "kobatake",
         hostWallet: "0x7q8r...9s0t",
         kaishyaku: "0xsamuraijp",
