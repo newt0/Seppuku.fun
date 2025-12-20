@@ -9,7 +9,7 @@ SeppukuFiは、「身銭を切るハラキリ」を通じて自己変容を実�
 
 * アプリURL: https://seppuku-fun.vercel.app/
 * スライド: https://gamma.app/docs/SeppukuFi-afoa36zd99345b8
-* デモ動画: https://youtu.be/SE5IEbaVA\_o?si=16RswhtyGQTL-QC4
+* デモ動画: https://youtube.com/shorts/6I8ogiRU6F4?si=1UB6rZNbUfBu-YQh
 
 ## 推しポイント
 
