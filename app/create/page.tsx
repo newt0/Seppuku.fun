@@ -21,16 +21,18 @@ export default function CreateMarket() {
   const handleSubmit = (data: {
     goal: string;
     host: string;
+    hostWallet: string;
     kaishyaku: string;
+    kaishyakuWallet: string;
     deadlineHours: number;
     hostStake: number;
   }) => {
     const market = createMarket(
       data.goal,
       data.host,
-      "0xHost...Wallet", // TODO: Replace with actual connected wallet
+      data.hostWallet,
       data.kaishyaku,
-      "0xKaish...Wallet", // TODO: Replace with actual kaishyaku wallet
+      data.kaishyakuWallet,
       data.deadlineHours,
       data.hostStake
     );

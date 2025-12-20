@@ -51,7 +51,9 @@ a {
 .text-gray-600 { color: #4b5563; }
 .border { border-width: 1px; border-style: solid; }
 .border-2 { border-width: 2px; border-style: solid; }
+.border-b { border-bottom-width: 1px; border-bottom-style: solid; }
 .border-black { border-color: #000000; }
+.border-gray-200 { border-color: #e5e7eb; }
 .border-gray-300 { border-color: #d1d5db; }
 .p-1 { padding: 0.25rem; }
 .p-2 { padding: 0.5rem; }
@@ -98,8 +100,13 @@ a {
 .text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
 .uppercase { text-transform: uppercase; }
 .text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
 .cursor-pointer { cursor: pointer; }
+.overflow-x-auto { overflow-x: auto; }
+.hover\:bg-gray-50:hover { background-color: #f9fafb; }
 .hover\:bg-gray-100:hover { background-color: #f3f4f6; }
 .hover\:bg-gray-800:hover { background-color: #1f2937; }
+.hover\:text-black:hover { color: #000000; }
 .transition-colors { transition-property: background-color, border-color, color; transition-duration: 150ms; }
 .font-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
