@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { useMiniKit } from "@coinbase/onchainkit/minikit";
+import { useMiniKit } from "../hooks/minikitMock";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { useMarkets } from "../contexts/MarketsContext";
