@@ -7,7 +7,7 @@ SeppukuFiは、「身銭を切るハラキリ」を通じて自己変容を実�
 
 ## デモ
 
-* アプリURL: https://seppuku.vercel.app/
+* アプリURL: https://seppuku-fun.vercel.app/
 * スライド: https://gamma.app/docs/SeppukuFi-afoa36zd99345b8
 * デモ動画: https://youtu.be/SE5IEbaVA\_o?si=16RswhtyGQTL-QC4
 
@@ -26,8 +26,7 @@ SeppukuFiは、「身銭を切るハラキリ」を通じて自己変容を実�
 ## 使用技術
 
 * TypeScript, Next.js, Tailwind CSS, Shadcn, Vercel
-* Claude Code, Serena MCP
-* VSCode
+* Claude Code + Serena MCP, VSCode + Coplito, Antigravity
 
 ## チームメンバー
 
