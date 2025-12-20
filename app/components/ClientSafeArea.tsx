@@ -1,6 +1,6 @@
 'use client';
 
-import { SafeArea } from '@coinbase/onchainkit/minikit';
+import { SafeArea } from '../hooks/minikitMock';
 import { ReactNode, useEffect, useState } from 'react';
 
 export function ClientSafeArea({ children }: { children: ReactNode }) {

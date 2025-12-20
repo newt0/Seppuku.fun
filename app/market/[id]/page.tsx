@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { useMiniKit } from "@coinbase/onchainkit/minikit";
+import { useMiniKit } from "../../hooks/minikitMock";
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import { useMarkets } from "../../contexts/MarketsContext";
@@ -195,11 +195,10 @@ export default function MarketDetail() {
                         </td>
                         <td className="py-2 px-2 text-center">
                           <span
-                            className={`px-2 py-1 text-xs font-bold ${
-                              bet.side === "YES"
+                            className={`px-2 py-1 text-xs font-bold ${bet.side === "YES"
                                 ? "bg-gray-800 text-white"
                                 : "bg-white text-black border border-black"
-                            }`}
+                              }`}
                           >
                             {bet.side}
                           </span>
