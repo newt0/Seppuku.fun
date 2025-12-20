@@ -7,7 +7,7 @@ import Link from "next/link";
 import { useMarkets } from "../contexts/MarketsContext";
 import { CreateMarketForm } from "../components/CreateMarketForm";
 
-export default function CreateMarket() {
+export default function CreateMarketClient() {
   const { isFrameReady, setFrameReady } = useMiniKit();
   const { createMarket } = useMarkets();
   const router = useRouter();
@@ -33,7 +33,6 @@ export default function CreateMarket() {
       data.hostStake
     );
 
-    // Navigate to the newly created market detail page
     router.push(`/market/${market.id}`);
   };
 
