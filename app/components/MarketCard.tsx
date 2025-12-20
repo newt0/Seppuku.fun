@@ -12,13 +12,27 @@ export function MarketCard({ market, status }: MarketCardProps) {
     const date = new Date(deadline);
     const now = new Date();
     const diffMs = date.getTime() - now.getTime();
-    const diffHrs = Math.floor(diffMs / (1000 * 60 * 60));
-    const diffMins = Math.floor((diffMs % (1000 * 60 * 60)) / (1000 * 60));
 
     if (diffMs < 0) {
       return 'Expired';
     }
-    return `${diffHrs}h ${diffMins}m remaining`;
+
+    const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+    const diffHrs = Math.floor((diffMs % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const diffMins = Math.floor((diffMs % (1000 * 60 * 60)) / (1000 * 60));
+
+    const parts = [];
+    if (diffDays > 0) {
+      parts.push(`${diffDays} ${diffDays === 1 ? 'day' : 'days'}`);
+    }
+    if (diffHrs > 0) {
+      parts.push(`${diffHrs} ${diffHrs === 1 ? 'hour' : 'hours'}`);
+    }
+    if (diffMins > 0) {
+      parts.push(`${diffMins} ${diffMins === 1 ? 'minute' : 'minutes'}`);
+    }
+
+    return parts.length > 0 ? `${parts.join(' ')} remaining` : 'Less than a minute remaining';
   };
 
   return (
