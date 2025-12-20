@@ -8,13 +8,13 @@ export function MarketStatusBadge({ status }: MarketStatusProps) {
   const getStatusStyles = () => {
     switch (status) {
       case 'OPEN':
-        return 'bg-gray-800 text-white';
+        return 'bg-light-green text-black';
       case 'PENDING_CLOSE':
-        return 'bg-gray-500 text-white';
+        return 'bg-light-green text-black';
       case 'CLOSED_SUCCESS':
-        return 'bg-white text-black border border-black';
+        return 'bg-light-purple text-black';
       case 'CLOSED_FAIL':
-        return 'bg-black text-white';
+        return 'bg-light-gray text-black';
       default:
         return 'bg-gray-300 text-black';
     }

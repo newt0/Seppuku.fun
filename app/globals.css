@@ -44,7 +44,13 @@ a {
 .bg-black { background-color: #000000; }
 .bg-gray-50 { background-color: #f9fafb; }
 .bg-gray-100 { background-color: #f3f4f6; }
+.bg-gray-300 { background-color: #d1d5db; }
+.bg-gray-500 { background-color: #6b7280; }
 .bg-gray-800 { background-color: #1f2937; }
+/* Status Label Colors */
+.bg-light-purple { background-color: #DDD6FE; } /* Light Purple - Success */
+.bg-light-gray { background-color: #E5E7EB; } /* Light Gray - Fail */
+.bg-light-green { background-color: #BBF7D0; } /* Light Green - Open */
 .text-white { color: #ffffff; }
 .text-black { color: #000000; }
 .text-gray-500 { color: #6b7280; }
