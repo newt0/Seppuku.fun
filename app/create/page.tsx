@@ -28,7 +28,9 @@ export default function CreateMarket() {
     const market = createMarket(
       data.goal,
       data.host,
+      "0xHost...Wallet", // TODO: Replace with actual connected wallet
       data.kaishyaku,
+      "0xKaish...Wallet", // TODO: Replace with actual kaishyaku wallet
       data.deadlineHours,
       data.hostStake
     );

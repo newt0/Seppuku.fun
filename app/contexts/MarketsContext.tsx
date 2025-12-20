@@ -71,6 +71,26 @@ export function MarketsProvider({ children }: { children: ReactNode }) {
         yesPool: 0.15,
         noPool: 0.05,
         closed: false,
+        bets: [
+          {
+            walletAddress: "0xAb3d...9eFg",
+            timestamp: new Date(now.getTime() - 2 * 24 * 60 * 60 * 1000).toISOString(),
+            amount: 0.05,
+            side: "YES",
+          },
+          {
+            walletAddress: "0x7H8i...2Jkl",
+            timestamp: new Date(now.getTime() - 1 * 24 * 60 * 60 * 1000).toISOString(),
+            amount: 0.1,
+            side: "YES",
+          },
+          {
+            walletAddress: "0xMn4o...6Pqr",
+            timestamp: new Date(now.getTime() - 12 * 60 * 60 * 1000).toISOString(),
+            amount: 0.05,
+            side: "NO",
+          },
+        ],
       },
       {
         id: "market-ycombinator",
@@ -84,6 +104,32 @@ export function MarketsProvider({ children }: { children: ReactNode }) {
         yesPool: 0.25,
         noPool: 0.3,
         closed: false,
+        bets: [
+          {
+            walletAddress: "0xSt5u...7Vwx",
+            timestamp: new Date(now.getTime() - 5 * 24 * 60 * 60 * 1000).toISOString(),
+            amount: 0.15,
+            side: "YES",
+          },
+          {
+            walletAddress: "0xYz8a...0Bcd",
+            timestamp: new Date(now.getTime() - 4 * 24 * 60 * 60 * 1000).toISOString(),
+            amount: 0.1,
+            side: "YES",
+          },
+          {
+            walletAddress: "0xEf1g...3Hij",
+            timestamp: new Date(now.getTime() - 3 * 24 * 60 * 60 * 1000).toISOString(),
+            amount: 0.2,
+            side: "NO",
+          },
+          {
+            walletAddress: "0xKl4m...6Nop",
+            timestamp: new Date(now.getTime() - 2 * 24 * 60 * 60 * 1000).toISOString(),
+            amount: 0.1,
+            side: "NO",
+          },
+        ],
       },
       {
         id: "market-weight-loss",
@@ -97,6 +143,32 @@ export function MarketsProvider({ children }: { children: ReactNode }) {
         yesPool: 0.08,
         noPool: 0.12,
         closed: false,
+        bets: [
+          {
+            walletAddress: "0xQr7s...9Tuv",
+            timestamp: new Date(now.getTime() - 3 * 24 * 60 * 60 * 1000).toISOString(),
+            amount: 0.03,
+            side: "YES",
+          },
+          {
+            walletAddress: "0xWx0y...2Zab",
+            timestamp: new Date(now.getTime() - 2 * 24 * 60 * 60 * 1000).toISOString(),
+            amount: 0.05,
+            side: "YES",
+          },
+          {
+            walletAddress: "0xCd3e...5Fgh",
+            timestamp: new Date(now.getTime() - 1 * 24 * 60 * 60 * 1000).toISOString(),
+            amount: 0.07,
+            side: "NO",
+          },
+          {
+            walletAddress: "0xIj6k...8Lmn",
+            timestamp: new Date(now.getTime() - 6 * 60 * 60 * 1000).toISOString(),
+            amount: 0.05,
+            side: "NO",
+          },
+        ],
       },
       {
         id: "market-solana-hackathon",
@@ -112,6 +184,32 @@ export function MarketsProvider({ children }: { children: ReactNode }) {
         declaredResult: true,
         closed: true,
         finalResult: true,
+        bets: [
+          {
+            walletAddress: "0xOp9q...1Rst",
+            timestamp: new Date(now.getTime() - 14 * 24 * 60 * 60 * 1000).toISOString(),
+            amount: 0.2,
+            side: "YES",
+          },
+          {
+            walletAddress: "0xUv2w...4Xyz",
+            timestamp: new Date(now.getTime() - 12 * 24 * 60 * 60 * 1000).toISOString(),
+            amount: 0.1,
+            side: "YES",
+          },
+          {
+            walletAddress: "0xAb5c...7Def",
+            timestamp: new Date(now.getTime() - 10 * 24 * 60 * 60 * 1000).toISOString(),
+            amount: 0.1,
+            side: "YES",
+          },
+          {
+            walletAddress: "0xGh8i...0Jkl",
+            timestamp: new Date(now.getTime() - 9 * 24 * 60 * 60 * 1000).toISOString(),
+            amount: 0.1,
+            side: "NO",
+          },
+        ],
       },
       {
         id: "market-christmas-girlfriend",
@@ -127,6 +225,32 @@ export function MarketsProvider({ children }: { children: ReactNode }) {
         declaredResult: false,
         closed: true,
         finalResult: false,
+        bets: [
+          {
+            walletAddress: "0xMn1o...3Pqr",
+            timestamp: new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000).toISOString(),
+            amount: 0.02,
+            side: "YES",
+          },
+          {
+            walletAddress: "0xSt4u...6Vwx",
+            timestamp: new Date(now.getTime() - 25 * 24 * 60 * 60 * 1000).toISOString(),
+            amount: 0.15,
+            side: "NO",
+          },
+          {
+            walletAddress: "0xYz7a...9Bcd",
+            timestamp: new Date(now.getTime() - 20 * 24 * 60 * 60 * 1000).toISOString(),
+            amount: 0.1,
+            side: "NO",
+          },
+          {
+            walletAddress: "0xEf0g...2Hij",
+            timestamp: new Date(now.getTime() - 15 * 24 * 60 * 60 * 1000).toISOString(),
+            amount: 0.1,
+            side: "NO",
+          },
+        ],
       },
     ];
   };
@@ -177,6 +301,7 @@ export function MarketsProvider({ children }: { children: ReactNode }) {
         yesPool: 0,
         noPool: 0,
         closed: false,
+        bets: [],
       };
 
       setMarkets((prev) => [newMarket, ...prev]);
@@ -190,10 +315,25 @@ export function MarketsProvider({ children }: { children: ReactNode }) {
       setMarkets((prev) =>
         prev.map((market) => {
           if (market.id === marketId) {
+            const newBet = {
+              walletAddress: "0xDummy...Wallet", // TODO: Replace with actual connected wallet
+              timestamp: new Date().toISOString(),
+              amount,
+              side,
+            };
+
             if (side === "YES") {
-              return { ...market, yesPool: market.yesPool + amount };
+              return {
+                ...market,
+                yesPool: market.yesPool + amount,
+                bets: [...market.bets, newBet],
+              };
             } else {
-              return { ...market, noPool: market.noPool + amount };
+              return {
+                ...market,
+                noPool: market.noPool + amount,
+                bets: [...market.bets, newBet],
+              };
             }
           }
           return market;

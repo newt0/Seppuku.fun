@@ -161,6 +161,57 @@ export default function MarketDetail() {
         {/* Bet Form - Show when market is OPEN */}
         {isOpen && <BetForm onBet={handleBet} />}
 
+        {/* Bet History Table */}
+        {market.bets.length > 0 && (
+          <div className="border border-black p-4 mb-4">
+            <h3 className="font-bold mb-3">Bet History</h3>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="border-b border-gray-300">
+                    <th className="text-left py-2 px-2">Wallet</th>
+                    <th className="text-left py-2 px-2">Time</th>
+                    <th className="text-right py-2 px-2">Amount</th>
+                    <th className="text-center py-2 px-2">Side</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {market.bets
+                    .slice()
+                    .reverse()
+                    .map((bet, index) => (
+                      <tr
+                        key={index}
+                        className="border-b border-gray-200 hover:bg-gray-50"
+                      >
+                        <td className="py-2 px-2 font-mono text-xs">
+                          {bet.walletAddress}
+                        </td>
+                        <td className="py-2 px-2 text-xs text-gray-600">
+                          {new Date(bet.timestamp).toLocaleString()}
+                        </td>
+                        <td className="py-2 px-2 text-right font-bold">
+                          {bet.amount.toFixed(3)} ETH
+                        </td>
+                        <td className="py-2 px-2 text-center">
+                          <span
+                            className={`px-2 py-1 text-xs font-bold ${
+                              bet.side === "YES"
+                                ? "bg-gray-800 text-white"
+                                : "bg-white text-black border border-black"
+                            }`}
+                          >
+                            {bet.side}
+                          </span>
+                        </td>
+                      </tr>
+                    ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        )}
+
         {/* Host Declaration - Show when past deadline and not declared */}
         {isPendingClose && market.declaredResult === undefined && (
           <div className="border border-black p-4 mb-4">
