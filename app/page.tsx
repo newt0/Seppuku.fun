@@ -4,6 +4,19 @@ import { useMiniKit } from "./hooks/minikitMock";
 import Link from "next/link";
 import { useMarkets } from "./contexts/MarketsContext";
 import { MarketCard } from "./components/MarketCard";
+import {
+  ConnectWallet,
+  Wallet,
+  WalletDropdown,
+  WalletDropdownDisconnect,
+} from '@coinbase/onchainkit/wallet';
+import {
+  Address,
+  Avatar,
+  Name,
+  Identity,
+  EthBalance,
+} from '@coinbase/onchainkit/identity';
 
 export default function Home() {
   const { isFrameReady, setFrameReady } = useMiniKit();
@@ -20,13 +33,34 @@ export default function Home() {
     <div className="min-h-screen bg-white p-4">
       <div className="max-w-2xl mx-auto">
         <header className="mb-6">
-          <h1 className="text-3xl font-bold mb-2">Seppuku.fun</h1>
-          <p className="text-sm text-gray-600 mb-4">
-            自己宣言をMarket化する Hyper Casual Finance
-          </p>
-          <p className="text-xs text-gray-500 mb-4">
-            他者の視線が行動変容を生む。人間関係が解決レイヤー。
-          </p>
+          <div className="flex justify-between items-start mb-4">
+            <div className="flex-1">
+              <h1 className="text-3xl font-bold mb-2">Seppuku.fun</h1>
+              <p className="text-sm text-gray-600 mb-2">
+                自己宣言をMarket化する Hyper Casual Finance
+              </p>
+              <p className="text-xs text-gray-500">
+                他者の視線が行動変容を生む。人間関係が解決レイヤー。
+              </p>
+            </div>
+            <div className="ml-4">
+              <Wallet>
+                <ConnectWallet>
+                  <Avatar className="h-6 w-6" />
+                  <Name />
+                </ConnectWallet>
+                <WalletDropdown>
+                  <Identity className="px-4 pt-3 pb-2" hasCopyAddressOnClick>
+                    <Avatar />
+                    <Name />
+                    <Address />
+                    <EthBalance />
+                  </Identity>
+                  <WalletDropdownDisconnect />
+                </WalletDropdown>
+              </Wallet>
+            </div>
+          </div>
         </header>
 
         <Link href="/create">
